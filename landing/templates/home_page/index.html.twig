@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HomePage index{% endblock %}
+
+{% block body %}
+    <h1>HomePage index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>SiteName</th>
+                <th>Menu</th>
+                <th>Header</th>
+                <th>Services</th>
+                <th>Portofolio</th>
+                <th>Footer</th>
+                <th>CopyrightYear</th>
+                <th>CopyrightName</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+    </table>
+
+    <a href="{{ path('home_page_new') }}">Create new</a>
+{% endblock %}
