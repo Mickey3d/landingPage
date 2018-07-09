@@ -1,0 +1,104 @@
+/*************************
+	  HEADER SECTION
+************************/
+
+header {
+	width: 85%;
+    margin-left: auto;
+}
+
+.header-container {
+	display: flex;
+	justify-content: center;
+	box-sizing: content-box;
+	position: relative;
+	top: -10px;
+	background-color: $headerContainBgColor;
+	background-image: $bgImg;
+	background-position: center bottom;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	padding: 15px;
+	margin: -5px;
+}
+
+.header-navbar {
+	margin-top: 20px;
+}
+
+.header-slider {
+	padding: 5px;
+	max-width: 740px;
+}
+
+.header-slider {
+	h2 {
+		font-size: $sliderTitleFtSize;
+		font-weight: $sliderTitleFtWeight;
+		margin-bottom: 20px;
+	}
+ 	p {
+		font-size: $sliderParaFtSize;
+		font-weight: $sliderParaFtWeight;
+		margin-bottom: 20px;
+	}
+	a {
+    	position: relative;
+		top: 100px;
+	}
+}
+
+/* MEDIUM SCREEN */
+
+@media screen and (min-width: 480px) and (max-width: 962px) {
+	header {
+		width: 85%;
+    	margin-left: auto;
+    	margin-right: auto;
+	}
+
+	.header-slider { 
+		h2 {
+			font-size: $sliderTitleFtSize;
+			font-weight: $sliderTitleFtWeight;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: $sliderParaFtSize;
+			font-weight: $sliderParaFtWeight;
+			margin-bottom: 20px;
+		}
+		a {
+			top: 75px;
+		}
+	}
+}
+
+
+/* SMALL SCREEN */
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+	header {
+		width: 85%;
+    	margin-left: auto;
+    	margin-right: auto;
+	}
+
+	.header-slider { 
+		h2 {
+			font-size: $sliderTitleFtSizeMd;
+			font-weight: $sliderTitleFtWeight;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: $sliderParaFtSizeMd;
+			font-weight: $sliderParaFtWeight;
+			margin-bottom: 20px;
+		}
+		a {
+			top: 20px;
+		}
+	}
+}
+

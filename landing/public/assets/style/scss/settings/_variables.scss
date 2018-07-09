@@ -1,0 +1,97 @@
+//  COLOR VARIABLES
+
+//  MAIN NAVIGATION ENGINE
+$navLinkBgColor : rgba(0, 0, 0, 0);
+$navLinkTextColor : rgb(255, 255, 255);
+$navLinkActiveBgColor : rgba(0, 0, 0, 0.1);
+$navLinkActiveTextColor : rgb(255, 255, 255);
+$navLinkHoverBgColor : rgba(0, 0, 0, 0.1);
+$navLinkHovertextColor : rgb(255, 255, 255);
+$linkFontSize: 15px;
+$LinkfontWeight: bold;
+
+//  HEADER & SLIDER CONTAINER VARIABLES
+
+$headerContainBgColor : #f84241;
+$bgImg: url("../../img/header/header-bg.png");
+$sliderTitleFtColor : white;
+$sliderTitleFtSize : 72px;
+$sliderTitleFtSizeMd : 56px;
+$sliderTitleFtSizeSm : 32px;
+$sliderTitleFtWeight : lighter;
+$sliderParaFtSize : 22px;
+$sliderParaFtSizeMd : 18px;
+$sliderParaFtSizeSm : 14px;
+$sliderParaFtWeight : lighter;
+
+
+
+// SERVICES CONTAINER & CARD VARIABLES
+
+$servicesContainBgColor: white;
+$serviceCardTitleFtColor : white;
+$serviceCardTitleFtSize : 24px;
+$serviceCardTitleFtSizeMd : 21px;
+$serviceCardTitleFtSizeSm : 18px;
+$serviceCardFtWeight : lighter;
+$serviceCardFtSize : 14px;
+$serviceCardFtSizeMd : 12px;
+$serviceCardFtSizeSm : 10px;
+$serviceCardFtWeight : lighter;
+$serviceLinkColor : #e54a52;
+
+
+// PORTOFOLIO CONTAINER  VARIABLES
+
+$portofolioContainBgColor: #e5e5e5;
+$portofolioTitleFtColor : black;
+$portofolioTitleFtSize : 24px;
+$portofolioTitleFtSizeMd : 21px;
+$portofolioTitleFtSizeSm : 18px;
+$portofolioFtWeight : lighter;
+$portofolioFtSize : 14px;
+$portofolioFtColor : #a0a0a0;
+$portofolioFtSizeMd : 12px;
+$portofolioFtSizeSm : 10px;
+$portofolioFtWeight : lighter;
+
+
+// FOOTER CONTAINER  VARIABLES
+
+$footerContainBgColor: white;
+$footerTitleFtColor : black;
+$footerTitleSecondFtColor : #e54a52;
+$footerTitleFtSize : 60px;
+$footerTitleFtSizeMd : 21px;
+$footerTitleFtSizeSm : 18px;
+$footerFtWeight : lighter;
+$footerFtSize : 14px;
+$footerFtColor : #a0a0a0;
+$footerFtSizeMd : 12px;
+$footerFtSizeSm : 10px;
+$footerFtWeight : lighter;
+$footerBottomFtWeight : lighter;
+$footerBottomFtSize : 14px;
+$footerBottomFtColor : #a0a0a0;
+$footerBottomSecondFtColor : black;
+
+// BUTTON ELEMENTS DESIGN VARIABLES
+
+$btnPaddingY: 9px;
+$btnPaddingX: 20px;
+$btnPaddingYMd: 6px;
+$btnPaddingXMd: 16px;
+$btnPaddingYSm: 4px;
+$btnPaddingXSm: 12px;
+$BtnFtSize: 0.9em;
+$BtnFtSizeMd: 0.8em;
+$BtnFtSizeSm: 0.6em;
+$btnLineHeight: 1.5;
+$btnBorderRadius: 5%;
+$btnBorderWidth: 1px;
+
+
+// ICON VARIABLES
+
+$iconSquareBgColor: #e5e5e5;
+$iconColor: #e54a52;

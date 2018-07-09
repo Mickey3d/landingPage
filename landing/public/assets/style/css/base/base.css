@@ -1,0 +1,25 @@
+/****************************************************************
+					FONT IMPORT
+****************************************************************/
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../font/OpenSans/OpenSans-Light.ttf") format("ttf"); }
+body {
+  font-family: Open Sans, Verdana, Arial, Helvetica, sans-serif; }
+
+/*********************
+	Font Color Engine
+*********************/
+.ft-white {
+  color: white !important; }
+
+.ft-black {
+  color: black !important; }
+
+.bold {
+  font-weight: bold !important; }
+
+.ft-normal {
+  font-weight: normal !important; }
+
+/*# sourceMappingURL=base.css.map */

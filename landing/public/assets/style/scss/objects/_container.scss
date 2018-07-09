@@ -1,0 +1,25 @@
+/****************************************************************
+							CONTAINER
+****************************************************************/
+
+.flex-container {
+  max-width: 940px;
+  padding: 5px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 962px) {
+  .flex-container {
+  	width: 100%;
+  	padding: 5px;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-evenly;
+	}
+}

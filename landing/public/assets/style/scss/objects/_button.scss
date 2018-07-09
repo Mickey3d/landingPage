@@ -1,0 +1,74 @@
+/*************************
+	  BUTTON DESIGN
+************************/
+
+.btn {
+	background-color: #989898;
+    border: solid $btnBorderWidth black;
+    border-radius: $btnBorderRadius;
+    color: white;
+	text-align: center;
+	white-space: wrap;
+ 	vertical-align: middle;
+	display: inline-block;
+	padding-top: $btnPaddingY;
+	padding-bottom: $btnPaddingY;
+	padding-left: $btnPaddingX;
+	padding-right: $btnPaddingX;
+	max-width: 130px;
+	text-decoration: none;
+	font-size: $BtnFtSize;
+	line-height: $btnLineHeight;
+	box-shadow: 2px 2px #0000002e;
+	text-shadow: 1px 1px 2px #000000;
+	-webkit-transition-duration: 0.8s; /* Safari */
+    transition-duration: 0.8s;
+
+}
+
+.btn:hover {
+    background-color: #eaeaea;
+    color: black;
+    box-shadow: 4px 4px #0000002e;
+	text-shadow: 1px 1px 2px white;
+}
+
+.btn-black {
+	background-color: black;
+}
+
+.btn-red {
+	background-color: #f2453f;
+	border: solid $btnBorderWidth #f2453f;
+}
+
+
+
+
+/* MEDIUM SCREEN */
+
+@media screen and (min-width: 480px) and (max-width: 962px) {
+	
+	.btn {
+		font-size: $BtnFtSizeMd;
+		padding-top: $btnPaddingYMd;
+		padding-bottom: $btnPaddingYMd;
+		padding-left: $btnPaddingXMd;
+		padding-right: $btnPaddingXMd;
+	}
+}
+
+
+/* SMALL SCREEN */
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+	
+	.btn {
+		font-size: $BtnFtSizeSm;
+		padding-top: $btnPaddingYSm;
+		padding-bottom: $btnPaddingYSm;
+		padding-left: $btnPaddingXSm;
+		padding-right: $btnPaddingXSm;
+
+	}
+}

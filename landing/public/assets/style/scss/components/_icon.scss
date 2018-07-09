@@ -1,0 +1,106 @@
+/******************
+		ICONS
+******************/
+
+
+/* THEMATIC ICONS */
+
+.ico-browser {
+	height: 48px;
+	width: 48px;
+	box-sizing: content-box;
+	position: relative;
+	background-image: url("../../icon/thematic/browser.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ico-iphone {
+	height: 48px;
+	width: 48px;
+	box-sizing: content-box;
+	position: relative;
+	background-image: url("../../icon/thematic/iphone.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ico-camera {
+	height: 48px;
+	width: 48px;
+	box-sizing: content-box;
+	position: relative;
+	background-image: url("../../icon/thematic/camera.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+/* SOCIAL ICONS */
+
+.social-ico {
+	height: 30px;
+	width: 30px;
+}
+
+.ico-fb {
+	height: 30px;
+	width: 30px;
+	box-sizing: content-box;
+	position: relative;
+	background-image: url("../../icon/social/fb.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ico-tw {
+	height: 30px;
+	width: 30px;
+	box-sizing: content-box;
+	position: relative;
+	background-image: url("../../icon/social/tw.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ico-insta {
+	height: 30px;
+	width: 30px;
+	box-sizing: content-box;
+	position: relative;
+	background-image: url("../../icon/social/insta.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ico-dribbble {
+	height: 30px;
+	width: 30px;
+	box-sizing: content-box;
+	position: relative;
+	background-image: url("../../icon/social/dribbble.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ico-mail {
+	height: 30px;
+	width: 30px;
+	box-sizing: content-box;
+	position: relative;
+	background-image: url("../../icon/social/mail.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+/* ICONS DESIGN & UTILITIES  */
+
+.square-ico {
+	box-sizing: content-box;
+	height: 125px;	
+	width: 125px;
+	background-color: $iconSquareBgColor;
+	padding: 5px;
+	margin: 5px;
+	-webkit-transition-duration: 0.8s; /* Safari */
+    transition-duration: 0.8s;
+}

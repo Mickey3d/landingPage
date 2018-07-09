@@ -1,0 +1,93 @@
+/*************************
+	  SERVICE SECTION
+************************/
+
+.services-container {
+	display: flex;
+	justify-content: space-around;
+	box-sizing: content-box;
+	position: relative;
+	flex-wrap: wrap;
+	padding-top: 90px;
+	padding-bottom: 90px;
+	background-color: $servicesContainBgColor;
+	width: 100%;
+	height: 100%;
+	margin: 10px;
+}
+
+.card-header {
+  max-width: 255px;
+  padding: 5px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.card-content {
+  width: 255px;
+  padding: 5px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+
+.services-card {
+	margin-bottom: 5px;
+	h2 {
+		font-size: $serviceCardTitleFtSize;
+		font-weight: $serviceCardFtWeight;
+		justify-content: start;
+	}
+ 	p {
+		font-size: $serviceCardFtSize;
+		font-weight: $serviceCardFtWeight;
+		margin-bottom: 20px;
+		position: relative;
+		left: 45px;
+	}
+	a {
+    	position: relative;
+    	color: $serviceLinkColor;
+    	left: 45px;
+		top: 10px;
+		text-decoration: none;
+		font-size: $serviceCardFtSize;
+		font-weight: $serviceCardFtWeight;
+		-webkit-transition-duration: 0.8s; /* Safari */
+    	transition-duration: 0.8s;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+.service-card-logo {
+	position: relative;
+	right: 15px;
+}
+
+/* MEDIUM SCREEN */
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+	
+}
+
+
+/* SMALL SCREEN */
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+	.services-container {
+		flex-direction: column;
+	}
+	.card-header {
+		  justify-content: space-evenly;
+		}
+	
+}

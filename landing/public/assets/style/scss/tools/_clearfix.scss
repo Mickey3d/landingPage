@@ -1,0 +1,53 @@
+/****************************************************************
+						ALIGNEMENT UTILITIES
+****************************************************************/
+
+#wrapper {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.float-left {
+	float: left !important;
+}
+
+.float-right {
+	float: right !important;
+}
+
+.float-none {
+	float: none !important;
+}
+
+.float-inherit {
+	float: inherit !important;
+}
+
+.clear-left {
+	clear: left !important;
+}
+
+.clear-right {
+	clear: right !important;
+}
+
+.clear-none {
+	clear: none !important;
+}
+
+.clear-inherit {
+	clear: inherit !important;
+}
+
+.clear-both {
+	clear: both !important;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
