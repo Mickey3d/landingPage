@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html>
+  <html lang="fr">
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+      <meta charset="utf-8">
+      <title>
+        {% block title %}Hello!{% endblock %}
+      </title>
+      <meta name="viewport" content="max-width=device-width, initial-scale=1"/>
+      <!--[if lte IE 8]><script src="assets/script/js/ie/html5shiv.js"></script><![endif]-->
+
+      {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/style/css/style.css') }}" http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/style/css/ie8.css" /><![endif]-->
+        <!-- Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
+      {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+      {% block body %}
+        <div id="wrapper">
+          <!-- ERRORS & MESSAGES -->
+          {% if errors is defined %}
+            <div style="z-index: 15000; top: 120px; position: fixed; width: 100%" class="alert alert-danger">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              {% for error in errors %}
+                <li>
+                  <strong>{{ error.message }}</strong>
+                </li>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% for label, messages in app.flashes %}
+            {% for message in messages %}
+              <div style="z-index: 15000; top: 200px; position: fixed; width: 100%" class="alert alert-{{ label }}">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <span>
+                  <strong>{{ message }}</strong>
+                </span>
+              </div>
+            {% endfor %}
+          {% endfor %}
+
+
+          {% block content %}{% endblock %}
+        </div>
+      {% endblock %}
+
+      {% block javascripts %}
+        <script src="{{ asset('assets/script/js/script.js') }}"></script>
+      {% endblock %}
     </body>
-</html>
+  </html>
