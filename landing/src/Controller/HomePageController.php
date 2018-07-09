@@ -23,8 +23,17 @@ class HomePageController extends Controller
         return $this->render('home_page/index.html.twig');
     }
 
+
     /**
-     * @Route("/new", name="home_page_new", methods="GET|POST")
+     * @Route("/admin/homepage/index", name="home_page_index_admin", methods="GET")
+     */
+    public function indexAdmin(HomePageRepository $homePageRepository): Response
+    {
+        return $this->render('home_page/admin/index.html.twig');
+    }
+
+    /**
+     * @Route("/admin/homepage/new", name="home_page_new", methods="GET|POST")
      */
     public function new(Request $request): Response
     {
@@ -37,25 +46,27 @@ class HomePageController extends Controller
             $em->persist($homePage);
             $em->flush();
 
-            return $this->redirectToRoute('home_page_index');
+            $this->addFlash('success','The HomePage have been created!');
+
+           return $this->redirectToRoute('home_page_edit', ['id' => $homePage->getId()]);
         }
 
-        return $this->render('home_page/new.html.twig', [
+        return $this->render('home_page/admin/new.html.twig', [
             'home_page' => $homePage,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="home_page_show", methods="GET")
+     * @Route("/admin/homepage/{id}", name="home_page_show", methods="GET")
      */
     public function show(HomePage $homePage): Response
     {
-        return $this->render('home_page/show.html.twig', ['home_page' => $homePage]);
+        return $this->render('home_page/admin/show.html.twig', ['home_page' => $homePage]);
     }
 
     /**
-     * @Route("/{id}/edit", name="home_page_edit", methods="GET|POST")
+     * @Route("/admin/homepage/{id}/edit", name="home_page_edit", methods="GET|POST")
      */
     public function edit(Request $request, HomePage $homePage): Response
     {
@@ -64,18 +75,19 @@ class HomePageController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash('success','The HomePage have been updated!');
 
             return $this->redirectToRoute('home_page_edit', ['id' => $homePage->getId()]);
         }
 
-        return $this->render('home_page/edit.html.twig', [
+        return $this->render('home_page/admin/edit.html.twig', [
             'home_page' => $homePage,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="home_page_delete", methods="DELETE")
+     * @Route("/admin/homepage/{id}", name="home_page_delete", methods="DELETE")
      */
     public function delete(Request $request, HomePage $homePage): Response
     {
@@ -83,8 +95,9 @@ class HomePageController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($homePage);
             $em->flush();
+            $this->addFlash('success','The HomePage have been deleted!');
         }
 
-        return $this->redirectToRoute('home_page_index');
+        return $this->redirectToRoute('home_page_index_admin');
     }
 }

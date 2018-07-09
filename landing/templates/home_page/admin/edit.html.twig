@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editer HomePage{% endblock %}
+
+{% block body %}
+    <h1>Editer HomePage</h1>
+
+    {{ include('home_page/admin/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('home_page_index_admin') }}">Retour à l'index</a>
+    <a href="{{ path('home_page_index') }}">Voir Homepage</a>
+
+    {{ include('home_page/admin/_delete_form.html.twig') }}
+{% endblock %}
