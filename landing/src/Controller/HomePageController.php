@@ -51,7 +51,7 @@ class HomePageController extends Controller
            return $this->redirectToRoute('home_page_edit', ['id' => $homePage->getId()]);
         }
 
-        return $this->render('home_page/admin/new.html.twig', [
+        return $this->render('home_page/admin/action/new.html.twig', [
             'home_page' => $homePage,
             'form' => $form->createView(),
         ]);
@@ -62,7 +62,7 @@ class HomePageController extends Controller
      */
     public function show(HomePage $homePage): Response
     {
-        return $this->render('home_page/admin/show.html.twig', ['home_page' => $homePage]);
+        return $this->render('home_page/admin/action/show.html.twig', ['home_page' => $homePage]);
     }
 
     /**
@@ -80,7 +80,7 @@ class HomePageController extends Controller
             return $this->redirectToRoute('home_page_edit', ['id' => $homePage->getId()]);
         }
 
-        return $this->render('home_page/admin/edit.html.twig', [
+        return $this->render('home_page/admin/action/edit.html.twig', [
             'home_page' => $homePage,
             'form' => $form->createView(),
         ]);

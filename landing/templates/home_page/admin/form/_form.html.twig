@@ -1,0 +1,95 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+
+<div class="card">
+  <!-- Card body -->
+  <div class="card-body">
+    {{ form_start(form) }}
+    {{ form_widget(form._token) }}
+    {% if not form.vars.valid %}
+      <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <span>
+          <strong>{{ form_errors(form) }}</strong>
+        </span>
+      </div>
+    {% endif %}
+    <form>
+      <div class="row">
+        <div class="col-sm-12">
+          {% if new is defined %}
+            <h1 class="h4 text-center py-4">{{ "New Homepage"|trans }}</h1>
+          {% else %}
+            <h1 class="h4 text-center py-4">{{ "Edit Homepage"|trans }}</h1>
+          {% endif %}
+        </div>
+        <div class="col-md-6">
+          <!-- Material input text -->
+          <div class="md-form">
+            <i class="fas fa-info-circle prefix grey-text"></i>
+            {{ form_errors(form.siteName) }}
+            {{ form_widget(form.siteName, {'attr': {'id': 'siteName', 'name': 'siteName', 'class': 'form-control', 'aria-label': 'Large', 'aria-describedby': 'inputGroup-sizing-sm' }}) }}
+            <label for="siteName" class="font-weight-light">{{ "Site Name"|trans }}</label>
+          </div>
+          <div class="md-form">
+            <label class="btn btn-success">
+              {{ form_widget(form.menu, {'attr': {'id': 'menu', 'name': 'menu','autocomplete': 'off', 'class': 'filled-in form-check-input', 'aria-label': 'Large', 'aria-describedby': 'inputGroup-sizing-sm' }}) }}
+              {{ "Menu"|trans }}
+            </label>
+          </div>
+          <div class="md-form">
+            <label class="btn btn-success">
+              {{ form_widget(form.header, {'attr': {'id': 'header', 'name': 'header','autocomplete': 'off', 'class': 'filled-in form-check-input', 'aria-label': 'Large', 'aria-describedby': 'inputGroup-sizing-sm' }}) }}
+              {{ "Header"|trans }}
+            </label>
+          </div>
+          <div class="md-form">
+            <label class="btn btn-success">
+              {{ form_widget(form.services, {'attr': {'id': 'services', 'name': 'services','autocomplete': 'off', 'class': 'filled-in form-check-input', 'aria-label': 'Large', 'aria-describedby': 'inputGroup-sizing-sm' }}) }}
+              {{ "Services"|trans }}
+            </label>
+          </div>
+          <div class="md-form">
+            <label class="btn btn-success">
+              {{ form_widget(form.portofolio, {'attr': {'id': 'portofolio', 'name': 'portofolio','autocomplete': 'off', 'class': 'filled-in form-check-input', 'aria-label': 'Large', 'aria-describedby': 'inputGroup-sizing-sm' }}) }}
+              {{ "Portofolio"|trans }}
+            </label>
+          </div>
+          <div class="md-form">
+            <label class="btn btn-success">
+              {{ form_widget(form.footer, {'attr': {'id': 'footer', 'name': 'footer','autocomplete': 'off', 'class': 'filled-in form-check-input', 'aria-label': 'Large', 'aria-describedby': 'inputGroup-sizing-sm' }}) }}
+              {{ "Footer"|trans }}
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6 p-5">
+          <div class="md-form  p-1  m-1 center">
+            <label class="form-check-label p-2" for="team">{{ "Copyright Name"|trans }}</label>
+            {{ form_errors(form.copyrightName) }}
+            {{ form_widget(form.copyrightName, {'attr': {'id': 'copyrightName', 'name': 'copyrightName', 'class': 'p-3 m-1', 'aria-label': 'Large'}}) }}
+          </div>
+          <div class="md-form  p-1  m-1 center">
+            <label class="form-check-label p-2" for="user">{{ "Copyright Year"|trans }}</label>
+            {{ form_errors(form.copyrightYear) }}
+            {{ form_widget(form.copyrightYear, {'attr': {'id': 'copyrightYear', 'name': 'copyrightYear', 'class': 'p-3 m-1', 'aria-label': 'Large'}}) }}
+          </div>
+          {{ form_rest(form) }}
+        </div>
+        <div class="text-center">
+          <button class="btn btn-green center" type="submit">{{ button_label|default('Save') }}</button>
+        </div>
+      </div>
+    </form>
+    {{ form_end(form) }}
+    {% if new is not defined %}
+      <div class="float-right">
+        <div class="float-right">
+          {{ include('home_page/admin/_delete_form.html.twig') }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  <!-- Card body -->
+</div>
