@@ -1,8 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'home_page/admin/layout_admin.html.twig' %}
 
-{% block title %}HomePage Index Admin{% endblock %}
+{% block title %}{{ parent() }}
+  HomePage Index Admin
+{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js"></script>
+{% endblock %}
 
 {% block content %}
   <!-- Content -->
-  
+
 {% endblock %}

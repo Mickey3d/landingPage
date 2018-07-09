@@ -1,11 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'home_page/admin/layout_admin.html.twig' %}
 
-{% block title %}Nouvelle HomePage{% endblock %}
+{% block title %}{{ parent() }}
+  Nouvelle HomePage
+{% endblock %}
 
 {% block content %}
-    <h1>Créer une nouvelle HomePage</h1>
+  <h1>Créer une nouvelle HomePage</h1>
 
-    {{ include('home_page/admin/_form.html.twig') }}
+  {{ include('home_page/admin/_form.html.twig') }}
 
-    <a href="{{ path('home_page_index_admin') }}">Retour à l'index</a>
+  <a href="{{ path('home_page_index_admin') }}">Retour à l'index</a>
 {% endblock %}

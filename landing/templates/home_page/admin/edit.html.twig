@@ -1,8 +1,8 @@
-{% extends 'base.html.twig' %}
+{% extends 'home_page/admin/layout_admin.html.twig' %}
 
 {% block title %}Editer HomePage{% endblock %}
 
-{% block body %}
+{% block content %}
     <h1>Editer HomePage</h1>
 
     {{ include('home_page/admin/_form.html.twig', {'button_label': 'Update'}) }}
