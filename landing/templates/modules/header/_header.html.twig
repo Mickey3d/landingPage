@@ -1,31 +1,24 @@
 <!-- Header -->
-		<section id="header" class="header-container">
-			<header>
-				<section id="mainNavigation" class="header-navbar flex-container">
-					<!-- Logo -->
-					<span class="header-navbar-logo">
-						<a href="#">
-							<img alt="logo" src="assets/img/general/brand.png" />
-						</a>
-					</span>
-		  			<!-- Main Navigation -->
-					<nav id="nav" class="" >
-						<ul class="navbar">
-							<li class="nav-link"><a class="active" href="#header">Home</a></li>
-							<li class="nav-link"><a href="#services">Services</a></li>
-							<li class="nav-link"><a href="#portofolio">Portofolio</a></li>
-							<li class="nav-link"><a href="#blog">Blog</a></li>
-							<li class="nav-link"><a href="#footer">Hire Me</a></li>
-						</ul>
-					</nav>
-				</section>
-	  			<!-- Slider -->
-				<section id="header-slider" class="header-slider">
-					<div id="header-slider--slide_1">
-						<h2 class="ft-white header-slider-title">Holla.</h2>
-						<p class="ft-white">I'm <span class="bold">John Doe</span> a Philippines-based <span class="bold">web</span>  & <span class="bold">graphic</span> designer who creates clean and modern design for the world of web.</p>
-						<a href="#" class="btn btn-black bold">View my work</a>
-					</div>
-				</section>
-			</header>
-		</section>
+<section id="header" class="header-container">
+  <header>
+    {% if homepage != null %}
+      {% if homepage.menu != false %}
+        {{ include('modules/menu/_navbar_main.html.twig') }}
+      {% endif %}
+    {% endif %}
+    <!-- Slider -->
+    <section id="header-slider" class="header-slider">
+      <div id="header-slider--slide_1">
+        <h2 class="ft-white header-slider-title">Holla.</h2>
+        <p class="ft-white">I'm
+          <span class="bold">John Doe</span>
+          a Philippines-based
+          <span class="bold">web</span>
+          &
+          <span class="bold">graphic</span>
+          designer who creates clean and modern design for the world of web.</p>
+        <a href="#" class="btn btn-black bold">View my work</a>
+      </div>
+    </section>
+  </header>
+</section>

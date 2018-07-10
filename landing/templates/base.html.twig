@@ -10,6 +10,7 @@
       <!--[if lte IE 8]><script src="assets/script/js/ie/html5shiv.js"></script><![endif]-->
 
       {% block stylesheets %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{{ asset('assets/style/css/style.css') }}" http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/style/css/ie8.css" /><![endif]-->
@@ -23,7 +24,7 @@
         <div id="wrapper">
           <!-- ERRORS & MESSAGES -->
           {% if errors is defined %}
-            <div style="z-index: 15000; top: 45px; position: relative; width: 100%" class="alert alert-danger">
+            <div style="z-index: 15000; top: 45px; position: relative; width: 70%" class="alert alert-danger">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
               {% for error in errors %}
                 <li>
@@ -35,15 +36,13 @@
 
           {% for label, messages in app.flashes %}
             {% for message in messages %}
-              <div style="z-index: 15000; top: 15px; position: relative; width: 100%" class="alert alert-{{ label }}">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <div style="z-index: 15000; top: 15px; position: relative; width: 70%" class="alert alert-{{ label }}">
                 <span>
                   <strong>{{ message }}</strong>
                 </span>
               </div>
             {% endfor %}
           {% endfor %}
-
 
           {% block content %}{% endblock %}
         </div>

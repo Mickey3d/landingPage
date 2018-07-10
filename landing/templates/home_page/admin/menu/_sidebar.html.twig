@@ -1,0 +1,76 @@
+<a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle">
+  <i class="fas fa-cog"></i>
+</a>
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle">
+      <i class="fa fa-arrow-right"></i>
+    </a>
+    <li class="sidebar-brand">
+      {% if homepage != null %}
+        <a href="{{ path('home_page_index') }}">{{ homepage.siteName }}</a>
+      {% else %}
+        <a href="{{ path('home_page_index') }}">{{ "Sans titre"|trans }}</a>
+      {% endif %}
+    </li>
+    <li>
+      {% if homepage != null %}
+        <a href="{{ path('home_page_edit', {'id': homepage.id}) }}">
+          <i class="fas fa-edit"></i>
+          {{ "HomePage Editor"|trans }}</a>
+      {% else %}
+        <a href="{{ path('home_page_new') }}">{{ "Nouvelle HomePage"|trans }}</a>
+      {% endif %}
+    </li>
+    {% if homepage != null %}
+      {% if homepage.menu != false %}
+        <li>
+          <a href="#menuEditor">
+            <i class="fas fa-list-ul"></i>
+            {{ "Menu Editor"|trans }}</a>
+        </li>
+      {% endif %}
+    {% endif %}
+    {% if homepage != null %}
+      {% if homepage.header != false %}
+        <li>
+          <a href="#headerEditor">
+            <i class="fas fa-pen-square"></i>
+            {{ "Header Editor"|trans }}</a>
+        </li>
+      {% endif %}
+    {% endif %}
+    {% if homepage != null %}
+      {% if homepage.footer != false %}
+        <li>
+          <a href="#footerEditor">
+            <i class="fas fa-pen-square"></i>
+            {{ "Footer Editor"|trans }}</a>
+        </li>
+      {% endif %}
+    {% endif %}
+    {% if homepage != null %}
+      {% if homepage.services != false %}
+        <li>
+          <a href="#servicesEditor">
+            <i class="far fa-handshake"></i>
+            {{ "Services Editor"|trans }}</a>
+        </li>
+      {% endif %}
+    {% endif %}
+    {% if homepage != null %}
+      {% if homepage.portofolio != false %}
+        <li>
+          <a href="#portofolioEditor">
+            <i class="far fa-images"></i>
+            {{ "Portofolio Editor"|trans }}</a>
+        </li>
+      {% endif %}
+    {% endif %}
+    <li>
+      <a href="#globalParameters">
+        <i class="fas fa-cogs"></i>
+        {{ "Parametres Globaux"|trans }}</a>
+    </li>
+  </ul>
+</div>

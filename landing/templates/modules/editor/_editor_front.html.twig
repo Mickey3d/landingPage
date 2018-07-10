@@ -1,7 +1,7 @@
 <span class="float-right ">
 {% if homepage != null %}
-  <a class="btn" href="{{ path('home_page_edit', {'id': homepage.id}) }}">Editeur</a>
+  <a class="btn" href="{{ path('home_page_edit', {'id': homepage.id}) }}">{{ "Editeur"|trans }}</a>
 {% else %}
-  <a class="btn" href="{{ path('home_page_new') }}">Editeur</a>
+  <a class="btn" href="{{ path('home_page_new') }}">{{ "Editeur"|trans }}</a>
 {% endif %}
 </span>

@@ -8,12 +8,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js" ></script>
 {% endblock %}
 
-{% block header %}
-  <!-- Content -->
+{% block content %}{{ parent() }}
 
-{% endblock %}
+  {{ include('home_page/admin/menu/_sidebar.html.twig') }}
 
-{% block content %}
-  <!-- Content -->
+      <div class="row">
+          <div class="col-md-12">
+            {% block wrapper %}
+              <!-- Content -->
+
+            {% endblock %}
+        </div>
+      </div>
 
 {% endblock %}

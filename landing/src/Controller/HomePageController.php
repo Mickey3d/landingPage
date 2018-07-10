@@ -61,7 +61,7 @@ class HomePageController extends Controller
      */
     public function show(HomePage $homePage): Response
     {
-        return $this->render('home_page/admin/action/show.html.twig', ['home_page' => $homePage]);
+        return $this->render('home_page/admin/action/show.html.twig', ['homepage' => $homePage]);
     }
 
     /**
@@ -80,7 +80,7 @@ class HomePageController extends Controller
         }
 
         return $this->render('home_page/admin/action/edit.html.twig', [
-            'home_page' => $homePage,
+            'homepage' => $homePage,
             'form' => $form->createView(),
         ]);
     }
