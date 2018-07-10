@@ -1,19 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}HomePage index{% endblock %}
+{% block title %}{{ "HomePage index"|trans }}
+{% endblock %}
 
 {% block content %}
   <!-- Content -->
   {% block header %}
-    {{ include('modules/header/_header.html.twig') }}
+    {% if homepage != null %}
+      {% if homepage.header != false %}
+        {{ include('modules/header/_header.html.twig') }}
+      {% endif %}
+    {% endif %}
   {% endblock %}
   {% block services %}
-    {{ include('modules/services/_services.html.twig') }}
+    {% if homepage != null %}
+      {% if homepage.services != false %}
+        {{ include('modules/services/_services.html.twig') }}
+      {% endif %}
+    {% endif %}
   {% endblock %}
   {% block portofolio %}
-    {{ include('modules/portofolio/_portofolio.html.twig') }}
+    {% if homepage != null %}
+      {% if homepage.portofolio != false %}
+        {{ include('modules/portofolio/_portofolio.html.twig') }}
+      {% endif %}
+    {% endif %}
   {% endblock %}
   {% block footer %}
-    {{ include('modules/footer/_footer.html.twig') }}
+    {% if homepage != null %}
+      {% if homepage.footer != false %}
+        {{ include('modules/footer/_footer.html.twig') }}
+      {% endif %}
+    {% endif %}
   {% endblock %}
+  {% block editor %}
+    {{ include('modules/editor/_editor_front.html.twig') }}
+  {% endblock %}
+
 {% endblock %}

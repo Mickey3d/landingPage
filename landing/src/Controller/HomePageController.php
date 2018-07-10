@@ -20,7 +20,9 @@ class HomePageController extends Controller
      */
     public function index(HomePageRepository $homePageRepository): Response
     {
-        return $this->render('home_page/index.html.twig');
+        return $this->render('home_page/index.html.twig', [
+          'homepage' => $homePageRepository->findOneByConfigName('default')
+        ]);
     }
 
 
@@ -29,7 +31,9 @@ class HomePageController extends Controller
      */
     public function indexAdmin(HomePageRepository $homePageRepository): Response
     {
-        return $this->render('home_page/admin/index.html.twig');
+        return $this->render('home_page/admin/index.html.twig', [
+          'homepage' => $homePageRepository->findOneByConfigName('default')
+        ]);
     }
 
     /**
@@ -38,23 +42,18 @@ class HomePageController extends Controller
     public function new(Request $request): Response
     {
         $homePage = new HomePage();
-        $form = $this->createForm(HomePageType::class, $homePage);
-        $form->handleRequest($request);
+        $homePage->setSiteName('Hello');
+        $homePage->setCopyrightName('John Doe');
+        $homePage->setCopyrightYear('2018');
+        $homePage->setConfigName('default');
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($homePage);
-            $em->flush();
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($homePage);
+        $em->flush();
+        $this->addFlash('success','The HomePage have been created!');
 
-            $this->addFlash('success','The HomePage have been created!');
+        return $this->redirectToRoute('home_page_edit', ['id' => $homePage->getId()]);
 
-           return $this->redirectToRoute('home_page_edit', ['id' => $homePage->getId()]);
-        }
-
-        return $this->render('home_page/admin/action/new.html.twig', [
-            'home_page' => $homePage,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**

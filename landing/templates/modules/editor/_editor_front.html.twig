@@ -1,0 +1,7 @@
+<span class="float-right ">
+{% if homepage != null %}
+  <a class="btn" href="{{ path('home_page_edit', {'id': homepage.id}) }}">Editeur</a>
+{% else %}
+  <a class="btn" href="{{ path('home_page_new') }}">Editeur</a>
+{% endif %}
+</span>

@@ -13,4 +13,21 @@
 {% block content %}
   <!-- Content -->
 
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-6">
+      {% if homepage != null %}
+        <a class="btn btn-success" href="{{ path('home_page_edit', {'id': homepage.id}) }}">{{ "Editeur"|trans }}</a>
+      {% else %}
+          <a class="btn btn-success" href="{{ path('home_page_new') }}">{{ "Editeur"|trans }}</a>
+      {% endif %}
+      </div>
+      <div class="col-md-6">
+        <a class="btn btn-dark btn-md" href="{{ path('home_page_index') }}">
+          <i class="fas fa-home"></i>
+          {{ "Site"|trans }}</a>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

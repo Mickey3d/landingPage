@@ -3,12 +3,9 @@
 {% block title %}Editer HomePage{% endblock %}
 
 {% block content %}
-    <h1>Editer HomePage</h1>
 
     {{ include('home_page/admin/form/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('home_page_index_admin') }}">Retour à l'index</a>
-    <a href="{{ path('home_page_index') }}">Voir Homepage</a>
+    <a class="btn btn-dark btn-md" href="{{ path('home_page_index') }}"><i class="fas fa-home"></i>  Site</a>
 
-    {{ include('home_page/admin/form/_delete_form.html.twig') }}
 {% endblock %}

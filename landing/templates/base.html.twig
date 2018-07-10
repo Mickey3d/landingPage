@@ -23,7 +23,7 @@
         <div id="wrapper">
           <!-- ERRORS & MESSAGES -->
           {% if errors is defined %}
-            <div style="z-index: 15000; top: 120px; position: fixed; width: 100%" class="alert alert-danger">
+            <div style="z-index: 15000; top: 45px; position: relative; width: 100%" class="alert alert-danger">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
               {% for error in errors %}
                 <li>
@@ -35,7 +35,7 @@
 
           {% for label, messages in app.flashes %}
             {% for message in messages %}
-              <div style="z-index: 15000; top: 200px; position: fixed; width: 100%" class="alert alert-{{ label }}">
+              <div style="z-index: 15000; top: 15px; position: relative; width: 100%" class="alert alert-{{ label }}">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <span>
                   <strong>{{ message }}</strong>

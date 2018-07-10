@@ -47,7 +47,7 @@ class HomePage
     private $footer;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $copyrightYear;
 
@@ -55,6 +55,11 @@ class HomePage
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $copyrightName;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $configName;
 
     public function getId()
     {
@@ -133,12 +138,12 @@ class HomePage
         return $this;
     }
 
-    public function getCopyrightYear(): ?\DateTimeInterface
+    public function getCopyrightYear(): ?string
     {
         return $this->copyrightYear;
     }
 
-    public function setCopyrightYear(?\DateTimeInterface $copyrightYear): self
+    public function setCopyrightYear(?string $copyrightYear): self
     {
         $this->copyrightYear = $copyrightYear;
 
@@ -153,6 +158,18 @@ class HomePage
     public function setCopyrightName(?string $copyrightName): self
     {
         $this->copyrightName = $copyrightName;
+
+        return $this;
+    }
+
+    public function getConfigName(): ?string
+    {
+        return $this->configName;
+    }
+
+    public function setConfigName(string $configName): self
+    {
+        $this->configName = $configName;
 
         return $this;
     }

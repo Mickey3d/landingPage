@@ -17,7 +17,11 @@
       </section>
 
       <section class="footer-section-bottom">
-        <p>©2018 <span>John Doe</span>. All Rights Reserved.</p>
+        {% if homepage != null %}
+          <p>©{{ homepage.copyrightYear }} <span>{{ homepage.copyrightName }}</span>. All Rights Reserved.</p>
+        {% else %}
+          <p>©2018 <span>John Doe</span>. All Rights Reserved.</p>
+        {% endif %}
       </section>
     </footer>
   </div>
